@@ -110,4 +110,39 @@ ship2.setheading(90)
 
 wn.update()
 
+#COPY PASTE FROM HERE
+running = True
+while running:
+    wn.update()
+    for rock in asteroids:
+        rock.sety(rock.ycor() - rock.speed)
+
+        # Respawn asteroid at top
+        if rock.ycor() < -300:
+            rock.goto(random.randint(-280, 280), 300)
+
+        # Collision detection
+        if ship1.distance(rock) < 20:
+            ship1.color("red")
+            print("💥 Crash! Mission failed.")
+            show_mission_failed()
+            running = False
+               
+        if ship2.distance(rock) < 20:
+            ship2.color("red")
+            print("💥 Crash! Mission failed.")
+            show_mission_failed()
+            running = False
+
+
+
+
+
+
+
+
+
+
+
+
 wn.mainloop()
