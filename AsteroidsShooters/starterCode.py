@@ -18,6 +18,7 @@ How To Play:
 --------------------------------------------
 Resources: 
     A. Get colour codes here: https://htmlcolorcodes.com/
+    B. See available fonts here: https://codehs.com/documentation/new/python-turtle#docs-write
 '''
 
 import turtle, random, time   # built‑in Python modules
@@ -60,6 +61,14 @@ def register_rocket_shape_color(screen, name, body_color, fin_color, flame_color
 
     screen.register_shape(name, rocket)
 
+def show_mission_failed():
+    message = turtle.Turtle()
+    message.hideturtle()
+    message.penup()
+    message.goto(0, 0)
+    message.color("red")
+    message.write("MISSION FAILED", align="center", font=("Comic Sans MS", 24, "bold"))
+
 # PART 1: CUSTOMIZE YOUR GAME BACKGROUND !!!!!
 
 # STEP 1: SET UP THE GAME WINDOW.
@@ -79,7 +88,7 @@ for i in range(50):           # Change the "50" to increase/decrease the number 
     x = random.randint(-290, 290)
     y = random.randint(-290, 290)
     starpen.goto(x, y)
-    draw_star(starpen, size=8)   # try 4–8 for different star sizes
+    draw_star(starpen, size=8)  # Change size to increase/decrease size of stars.
 
 # PART 2: CUSTOMIZE YOUR PLAYERS !!!!!!
 
@@ -101,5 +110,4 @@ ship2.setheading(90)
 
 wn.update()
 
-# KEEP THIS AT THE BOTTOM ALWAYS
 wn.mainloop()
