@@ -100,3 +100,6 @@ ship2.goto(-150, -250)
 ship2.setheading(90)
 
 wn.update()
+
+# KEEP THIS AT THE BOTTOM ALWAYS
+wn.mainloop()
