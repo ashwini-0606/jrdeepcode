@@ -110,7 +110,68 @@ ship2.setheading(90)
 
 wn.update()
 
-#COPY PASTE FROM HERE
+'''
+At this point, students should have completed their customizations to the
+background, as well as their spaceships. This should have taken about ~ 15-20 mins
+
+The following code should be done in a follow along style.
+'''
+
+# PART 3: MOVE YOUR ROCKET SHIP !!!!!!
+def go_left1():  
+    ship1.setx(ship1.xcor() - 20)
+    wn.update()
+def go_right1():                        # Can copy paste and just change
+    ship1.setx(ship1.xcor() + 20)
+    wn.update()
+def go_up1():    
+    ship1.sety(ship1.ycor() + 20)
+    wn.update()
+def go_down1():  
+    ship1.sety(ship1.ycor() - 20)
+    wn.update()
+
+def go_left2():  
+    ship2.setx(ship2.xcor() - 20)
+    wn.update()
+def go_right2(): 
+    ship2.setx(ship2.xcor() + 20)
+    wn.update()
+def go_up2():    
+    ship2.sety(ship2.ycor() + 20)
+    wn.update()
+def go_down2():  
+    ship2.sety(ship2.ycor() - 20)
+    wn.update()
+
+wn.listen()                 
+wn.onkeypress(go_left1,  "Left")
+wn.onkeypress(go_right1, "Right")
+wn.onkeypress(go_up1,    "Up")
+wn.onkeypress(go_down1,  "Down")
+wn.onkeypress(go_left2,  "a")
+wn.onkeypress(go_right2, "d")
+wn.onkeypress(go_up2,    "w")
+wn.onkeypress(go_down2,  "s")
+
+'''
+At this point, running the game should allow the players to move around when pressing
+the ARROW or ASWD keys.
+
+Check to make sure that each groups is working, if not facilitate debugging.
+'''
+# PART 4: CREATE THE ASTEROIDS!!!!!!!!!!!
+asteroids = []
+for i in range(6):
+    rock = turtle.Turtle()
+    rock.shape("circle")
+    rock.color("grey")
+    rock.penup()
+    rock.goto(random.randint(-280, 280), random.randint(100, 290))
+    rock.speed = random.randint(2, 4)   # custom attribute
+    asteroids.append(rock)
+
+# PART 5: MAIN GAME PLAY !!!!!!!!!!!!!!!
 running = True
 while running:
     wn.update()
@@ -133,16 +194,24 @@ while running:
             print("💥 Crash! Mission failed.")
             show_mission_failed()
             running = False
+        
+        ''' 
+        By this point, students should have a fully functioning game that avoids asteroids.
+        The below code is extra stuff and features if time allows.
+        '''
+        if ship1.distance(ship2) < 20:
+            ship1.color("red")
+            print("💥 Crash! Mission failed.")
+            show_mission_failed()
+            running = False
 
+        if ship2.distance(ship1) < 20:
+            ship2.color("red")
+            print("💥 Crash! Mission failed.")
+            show_mission_failed()
+            running = False
 
+    time.sleep(0.02)   # 50 FPS
 
-
-
-
-
-
-
-
-
-
+# Keep the window open until you close it yourself
 wn.mainloop()
