@@ -5,11 +5,11 @@ Take your imagination to new heights and beyond! In this aerospace-themed softwa
 
 The following folders contain code and descriptions for some activities completed in the Human Computer course.
 
-**[🚀 Asteroids Shooters](https://github.com/ashwini-0606/jrdeepcode/tree/main/AsteroidsShooters)**
+**🚀[ Asteroids Shooters](https://github.com/ashwini-0606/jrdeepcode/tree/main/AsteroidsShooters)**
 
-**[🌟 Constellation Circuits](https://github.com/ashwini-0606/jrdeepcode/tree/main/ConstellationCircuits)**
+**🌟[ Constellation Circuits](https://github.com/ashwini-0606/jrdeepcode/tree/main/ConstellationCircuits)**
 
-**[🧤 Space Gloves](https://github.com/ashwini-0606/jrdeepcode/tree/main/SpaceSuitGloves)**
+**🧤[ Space Gloves](https://github.com/ashwini-0606/jrdeepcode/tree/main/SpaceSuitGloves)**
 
 
-**[👩🏽‍💻 Coding Resources](https://github.com/ashwini-0606/jrdeepcode/tree/main/CodingResources)**
+**👩🏽‍💻[ Coding Resources](https://github.com/ashwini-0606/jrdeepcode/tree/main/CodingResources)**
