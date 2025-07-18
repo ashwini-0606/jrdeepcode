@@ -1,3 +1,5 @@
+# This version of the game includes a score counter, with memory of the highest score.
+
 import turtle, random, time
 
 def draw_star(pen, size=6):
